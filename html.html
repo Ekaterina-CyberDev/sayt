@@ -1,0 +1,136 @@
+<img src="log.png" style="position: relative; right: 3%;/>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пряничкин</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+<header>
+    <h2>Домашние Пряники</h2>
+    <nav>
+        <ul>
+	    <li><a href="#assortment">Ассортимент</a></li>
+            <li><a href="#pricing">Стоимость</a></li>
+	    <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="image-buttons" class="image-buttons-section">
+    <div class="image-container">
+        <img src="log.png" />
+    </div>
+    <div class="button-container">
+        <button onclick="addToCart('Медовые пряники')">Заказать медовые пряники</button>
+        <button onclick="addToCart('Шоколадные пряники')">Заказать шоколадные пряники</button>
+        <button onclick="addToCart('Имбирные пряники')">Заказать имбирные пряники</button>
+    </div>
+</section>
+
+<section id="services" class="bg-image">
+    <h2>Мы предлагаем</h2>
+    <div class="services-grid">
+        <div class="service-item">Изготовление домашних пряников</div>
+        <div class="service-item">Доставка пряников на дом</div>
+        <div class="service-item">Оптовая продажа пряников</div>
+        <div class="service-item">Организация мастер-классов</div>
+        <div class="service-item">Подарочные наборы пряников</div>
+        <div class="service-item">Индивидуальные заказы</div>
+        <div class="service-item">Продажа пряников на праздники</div>
+        <div class="service-item">Производство пряничных домиков</div>
+        <div class="service-item">Создание пряничных фигурок</div>
+    </div>
+</section>
+<section id="assortment">
+    <h2>Ассортимент</h2>
+    <div class="product">
+    <div class="product-content">
+        <img src="https://cdn.culture.ru/images/7963f571-db3b-5c00-9da5-8695d07032cb" width="340" class="product-image"/>
+        <div class="text-container">
+            <h3>Медовые пряники</h3>
+            <p>Состав: мед, мука, яйца, специи, сахар.</p>
+            <p>Вкусные и насыщенные пряники с медом.</p>
+            <button onclick="addToCart('Медовые пряники')">Заказать</button>
+        </div>
+    </div>
+</div>
+    <div class="product">
+    <div class="product-content">
+        <img src="https://img-global.cpcdn.com/recipes/efa7bd3c3ba6a5a0/680x482cq70/mramornoie-shokoladnoie-piechienie-основне-фото-рецепта.jpg" width="340" class="product-image"/>
+        <div class="text-container">
+            <h3>Шоколадные пряники</h3>
+            <p>Состав: мука, сахар, сливочное масло, какао, яйца.</p>
+            <p>Нежные пряники с шоколадной глазурью.</p>
+            <button onclick="addToCart('Шоколадные пряники')">Заказать</button>
+        </div>
+    </div>
+</div>
+    <div class="product">
+    <div class="product-content">
+        <img src="https://avatars.dzeninfra.ru/get-zen_doc/4821428/pub_63b465c351ee5b461f195862_63b4665f8a0b0e3acd257465/scale_1200" width="340" class="product-image"/>
+        <div class="text-container">
+            <h3>Имбирные пряники</h3>
+            <p>Состав: мука, сахар, имбирь, мед, яйца.</p>
+            <p>Пряники с острым имбирным вкусом.</p>
+            <button onclick="addToCart('Имбирные пряники')">Заказать</button>
+        </div>
+    </div>
+</div>
+</section>
+
+<section id="pricing">
+    <h2>Стоимость</h2>
+    <table>
+        <tr>
+            <th>Продукт</th>
+            <th>Цена (руб.)</th>
+        </tr>
+        <tr>
+        <td>Медовые пряники</td>
+            <td>200</td>
+        </tr>
+        <tr>
+        <td>Шоколадные пряники</td>
+            <td>250</td>
+        </tr>
+        <tr>
+        <td>Имбирные пряники</td>
+            <td>230</td>
+        </tr>
+    </table>
+</section>
+
+<section id="contact">
+    <h2>Связаться с нами</h2>
+    <form action="submit_contact.php" method="POST">
+        <label for="name">Ваше имя:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Ваш email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Сообщение:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Отправить</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2024 Домашние Пряники</p>
+</footer>
+
+<script>
+function addToCart(item) {
+    alert(item + " добавлен в корзину!");
+}
+</script>
+
+</body>
+</html>
